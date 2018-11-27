@@ -13,6 +13,8 @@ import { SiComponent } from './concepts/databinding/si/si.component';
 import { PbComponent } from './concepts/databinding/pb/pb.component';
 import { EbComponent } from './concepts/databinding/eb/eb.component';
 import { TwbComponent } from './concepts/databinding/twb/twb.component';
+import { CpbComponent } from './concepts/databinding/cpb/cpb.component';
+import { CebComponent } from './concepts/databinding/ceb/ceb.component';
 
 // main switch box -- everything is wired
 @NgModule({
@@ -26,7 +28,9 @@ import { TwbComponent } from './concepts/databinding/twb/twb.component';
     SiComponent,
     PbComponent,
     EbComponent,
-    TwbComponent
+    TwbComponent,
+    CpbComponent,
+    CebComponent
   ],
   imports: [
     BrowserModule,
