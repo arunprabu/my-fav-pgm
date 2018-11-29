@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DatabindingComponent } from './concepts/databinding/databinding.component';
-import { ProgramsComponent } from './programs/programs.component';
-import { ContactComponent } from './contact/contact.component';
-import { AboutComponent } from './about/about.component';
-import { AddProgramComponent } from './programs/add-program/add-program.component';
-import { DetailProgramComponent } from './programs/detail-program/detail-program.component';
+import { DatabindingComponent } from './components/concepts/databinding/databinding.component';
+import { ProgramsComponent } from './components/programs/programs.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { AboutComponent } from './components/about/about.component';
+import { AddProgramComponent } from './components/programs/add-program/add-program.component';
+import { DetailProgramComponent } from './components/programs/detail-program/detail-program.component';
 
 //configure routes 
 const routes: Routes = [

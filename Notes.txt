@@ -1,0 +1,62 @@
+Components
+Data Binding
+Directives 
+  'plugins'
+  will impact the dom 
+  statements written for DOM 
+  1) Attribute Directives  (built-in)
+    <p title="arun" [ngClass]="{ 'red': !isLoggedIn() }" [ngStyle]="">test</p>
+  2) Structural Directives  (built-in)
+      make impact in structure/view 
+      *ngIf, *ngFor, ngSwitch
+  3) Custom Attribute Directives 
+Routing
+  - helps us build SPA 
+  - stops page reload and updates the main section 
+Template Pages
+Forms 
+  1. Template Driven Forms 
+      - Built using html 
+      Adv 
+        1. Easy to implement 
+        2. Quick to implement 
+      Disadv 
+        1. Challenging to do some validations 
+  2. Reactive Forms 
+      - Built using Ts / Angular form related API's 
+      Adv 
+        1. Good if you are doing complex validations 
+        2. You will have more control over the form field 
+      Disadv
+        1. LEarning curve is large 
+        2. Challenging to implement 
+Services
+  - ng g s program 
+  - Intermediate layer b/w comp and rest api 
+  - Responsible for connecting to rest api end point
+  - get the data from comp 
+  - send the data to rest api 
+  - receive resp from rest api 
+  - send the resp back to comp 
+Http in Angular 
+Dependency Injection
+RxJS and Observables
+Pipes 
+Other Decorators and @Injectable
+...
+...
+...
+
+
+
+PRoject structure 
+  src/  
+    app/
+      components/
+        shared/
+        programs/
+        contact/
+        concepts/
+        about/
+      services/
+        program 

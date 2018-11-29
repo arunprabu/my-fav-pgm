@@ -1,0 +1,48 @@
+<div class="container">
+  <h1 class="display-1">Adding a Program</h1>
+
+  <div class="alert alert-success" role="alert">
+    Wow! You are a premium user and you have rights to add a new Program!
+  </div>
+
+  {{ pgmName }}
+  <!-- Template driven forms 
+  1. ngModel -->
+  <!-- <form ngNativeValidate (ngSubmit)="addProgramHandler()">
+    <div class="form-group row">
+      <label for="pgmInput" class="col-sm-2 col-form-label">Program Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="pgmInput" [(ngModel)]="programData.pgmName" name="pgmName" placeholder="Name of the Program" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="tvChannelInput" class="col-sm-2 col-form-label">TV Channel</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="tvChannelInput" [(ngModel)]="programData.tvChannel" name="tvChannel" placeholder="TV Channel" required>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" >Add Program</button>
+  </form>
+  -->
+
+  <!-- approach #2 -->
+  <form  ngNativeValidate #f="ngForm" (ngSubmit)="submitHandler(f)">
+    <div class="form-group row">
+      <label for="pgmInput" class="col-sm-2 col-form-label">Program Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="pgmInput" ngModel name="pgmName" placeholder="Name of the Program" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="tvChannelInput" class="col-sm-2 col-form-label">TV Channel</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="tvChannelInput" ngModel name="tvChannel" placeholder="TV Channel" required>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" >Add Program</button>
+  </form>
+
+  <div class="alert alert-success">
+    {{isSaved}}
+  </div>
+</div>
