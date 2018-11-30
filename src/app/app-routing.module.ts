@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: '', component: DatabindingComponent},
   { path: 'programs', component: ProgramsComponent},
   { path: 'programs/add', component: AddProgramComponent},
-  { path: 'programs/1', component: DetailProgramComponent},
+  { path: 'programs/:id', component: DetailProgramComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'about', component: AboutComponent}
 ];
