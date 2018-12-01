@@ -38,12 +38,25 @@ Services
   - send the data to rest api 
   - receive resp from rest api 
   - send the resp back to comp 
-Http in Angular 
+Http in Angular vs HttpClient
+  Http Works with pipes, maps
+  HttpClient doesnt need pipes, maps  
 Dependency Injection
 RxJS and Observables
-Pipes 
+  What's Observable?
+        It's a collection that returned over time. 
+        It's a push, that sends multiple values
+        Observable is like restaurant kitchen.
+        If you subscribe to observable, it decides when to give information 
+    Now, What's RxJs?
+        Various method of operators, you can chain on Observables to filter data, sort, pipe, map
+    Refer: http://jsbin.com/kuzifehivi/4/edit?html,js,console
 Other Decorators and @Injectable
-...
+Pipes 
+Guards
+Interface
+Unit Testing
+Modules
 ...
 ...
 

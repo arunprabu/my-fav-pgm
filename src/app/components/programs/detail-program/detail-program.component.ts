@@ -13,7 +13,11 @@ declare var $: any;   //use jquery with in this component
 export class DetailProgramComponent implements OnInit {
 
   pgmId: number;
-  pgmData: {}
+  pgmData: {};
+  editablePgmData: {};
+
+  statusMsg: string;
+  isSaved: boolean = false;
 
   constructor(private pgmService: ProgramService, private activatedRoute: ActivatedRoute) {
     this.activatedRoute.params.subscribe( (params) => {
@@ -23,6 +27,10 @@ export class DetailProgramComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getPgmData();
+  }
+
+  getPgmData(){
     //get the id param from the url 
     //send the same to service
     this.pgmService.getProgramById(this.pgmId)
@@ -32,10 +40,37 @@ export class DetailProgramComponent implements OnInit {
               });
   }
 
-
   launchEditModal(){
     //to make bootstrap modal work thru jquery
+    this.editablePgmData = JSON.parse(JSON.stringify(this.pgmData)); //duplicate obj
     $('#editModal').modal('show');
   }
 
+  updateProgram(){
+    console.log(this.editablePgmData);
+
+    //1. connect to service and send the updatable data 
+    this.pgmService.update(this.editablePgmData)
+                  .subscribe( (resp) => {  //2. receive resp from service 
+                    console.log(resp);
+                    // if status is success 
+                    //if(resp){
+                      this.statusMsg = "Thanks! Saved successfully.";
+                      this.isSaved = true;
+                      setTimeout( () =>{
+                        $('#editModal').modal('hide');
+                        //this.pgmData = resp;
+                        this.getPgmData();
+                        //#1 page refresh
+                      }, 3000 );
+                      
+                    //}
+                    
+                  })
+    
+  }
+
+  
+
 }
+

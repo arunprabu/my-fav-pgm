@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable} from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -27,10 +28,10 @@ export class ProgramService {
     //1. send the req to rest api 
     return this.http.get("https://jsonplaceholder.typicode.com/posts")
             .pipe(map( (resp ) =>{ //2. receive resp from rest api 
-              console.log(resp);
+              console.log(resp); 
               return resp.json(); //3. send the resp back to comp 
-            }));
-
+            }))
+            
             
   }
 
@@ -45,5 +46,14 @@ export class ProgramService {
 
   }
 
+  update(pgmData){
+    console.log(pgmData);
+    //2. send the data to rest api 
+    return this.http.put(`https://jsonplaceholder.typicode.com/posts/${pgmData.id}`, pgmData)
+            .pipe(map( (resp ) =>{ //3. receive resp from rest api 
+              console.log(resp);
+              return resp.json(); //4. send the resp back to comp 
+            }));
+  }
 
 }

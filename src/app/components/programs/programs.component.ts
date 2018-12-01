@@ -19,11 +19,11 @@ export class ProgramsComponent implements OnInit, OnDestroy {
     console.log("Inside ngOnInit");
     //1. send the req to service
     this.programService.getPrograms()
-                    .subscribe( (resp) => {
-                      console.log(resp);
-                      this.pgmList = resp;
-                    });
-    //2.get the resp from service 
+            .subscribe( (resp) => { //2.get the resp from service 
+              console.log(resp);
+              this.pgmList = resp;
+            });        
+    
   }
 
   //called when you navigate away from this component
