@@ -1,3 +1,20 @@
-<p>
-  about works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Pipes </h2> 
+      <p>built-in pipes </p>
+      <p> {{  birthday | date: 'dd, MMMM yyyy hh:mm:ss a' | uppercase}}</p>
+
+      <p>{{ lipsum | uppercase }}</p>
+
+      <h2> Custom Pipes </h2>
+      <p>{{ lipsum | ellipsis: 60 }}</p>
+      <p>{{ lipsum | ellipsis: 120 }}</p>
+      <p>{{ lipsum | ellipsis: 30 }}</p>
+      <p>{{ lipsum | ellipsis: 200 }}</p>
+      <p>{{ lipsum | ellipsis }}</p>
+
+
+    </div>
+  </div>
+</div>

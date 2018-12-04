@@ -5,7 +5,7 @@
     Wow! You are a premium user and you have rights to add a new Program!
   </div>
 
-  {{ pgmName }}
+  <!-- {{ pgmName }} -->
   <!-- Template driven forms 
   1. ngModel -->
   <!-- <form ngNativeValidate>
@@ -30,19 +30,23 @@
     <div class="form-group row">
       <label for="pgmInput" class="col-sm-2 col-form-label">Program Name</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="pgmInput" ngModel name="pgmName" placeholder="Name of the Program" required>
+        <input type="text" class="form-control" id="pgmInput" ngModel name="title" placeholder="Name of the Program" required>
       </div>
     </div>
     <div class="form-group row">
       <label for="tvChannelInput" class="col-sm-2 col-form-label">TV Channel</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="tvChannelInput" ngModel name="tvChannel" placeholder="TV Channel" required>
+        <input type="text" class="form-control" id="tvChannelInput" ngModel name="body" placeholder="TV Channel" required>
       </div>
     </div>
     <button type="submit" class="btn btn-primary" >Add Program</button>
   </form>
 
   <div class="alert alert-success" *ngIf="isSaved">
-    Thanks! saved successfully
+    Thanks! saved successfully.
+
+    Here's what you saved. 
+    <p>{{programData.title}}</p>
+    <p>{{programData.body}}</p>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ProgramService } from 'src/app/services/program.service';
+import { IProgram } from 'src/app/models/iprogram';
 
 @Component({
   selector: 'app-programs',
@@ -8,7 +9,8 @@ import { ProgramService } from 'src/app/services/program.service';
 })
 export class ProgramsComponent implements OnInit, OnDestroy {
 
-  pgmList: [];
+  //pgmList: IProgram[]; //valid 
+  pgmList: Array<IProgram>; //valid 
 
   constructor( private programService: ProgramService ) {
     console.log("Inside Constructor");

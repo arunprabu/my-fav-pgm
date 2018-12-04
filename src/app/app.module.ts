@@ -21,8 +21,10 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AddProgramComponent } from './components/programs/add-program/add-program.component';
 import { DetailProgramComponent } from './components/programs/detail-program/detail-program.component';
+import { EllipsisPipe } from './pipes/ellipsis.pipe';
 
 // main switch box -- everything is wired
+//Decorator takes in meta data as params
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,8 @@ import { DetailProgramComponent } from './components/programs/detail-program/det
     AboutComponent,
     ContactComponent,
     AddProgramComponent,
-    DetailProgramComponent
+    DetailProgramComponent,
+    EllipsisPipe
   ],
   imports: [
     BrowserModule,

@@ -6,12 +6,13 @@ import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
 import { AddProgramComponent } from './components/programs/add-program/add-program.component';
 import { DetailProgramComponent } from './components/programs/detail-program/detail-program.component';
+import { AuthGuard } from './guards/auth.guard';
 
 //configure routes 
 const routes: Routes = [
-  { path: '', component: DatabindingComponent},
+  { path: '', component: DatabindingComponent}, 
   { path: 'programs', component: ProgramsComponent},
-  { path: 'programs/add', component: AddProgramComponent},
+  { path: 'programs/add', component: AddProgramComponent, canActivate: [AuthGuard] },
   { path: 'programs/:id', component: DetailProgramComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'about', component: AboutComponent}

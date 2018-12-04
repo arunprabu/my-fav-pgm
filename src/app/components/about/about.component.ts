@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  birthday = new Date(1988, 3, 15); // April 15, 1988
+
+  lipsum: string = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit odio illo maxime harum minima, fuga cupiditate ut corrupti placeat eaque alias, nobis deserunt officiis ipsam facere ad, amet autem totam?";
+
   constructor() { }
 
   ngOnInit() {
-  }
 
+  }
+  
 }

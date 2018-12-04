@@ -5,6 +5,7 @@ import { Observable} from 'rxjs';
 import { map } from 'rxjs/operators';
 
 //Decorator
+//@Injectable makes sure that the class is injectable as dependency
 @Injectable({
   providedIn: 'root'
 })

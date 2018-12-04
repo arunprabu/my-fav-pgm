@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+
 import { ProgramService } from 'src/app/services/program.service';
+import { IProgram } from 'src/app/models/iprogram';
 
 @Component({
   selector: 'app-add-program',
@@ -10,10 +12,7 @@ import { ProgramService } from 'src/app/services/program.service';
 export class AddProgramComponent implements OnInit {
 
   //should be changed with interface later
-  programData: {} = {  
-    pgmName: '',
-    tvChannel: ''
-  }
+  programData: IProgram;
 
   isSaved: boolean = false;
   //Dependency Injection
@@ -38,6 +37,8 @@ export class AddProgramComponent implements OnInit {
                           // 4. channelize it to the comp html
                           if(resp){
                             this.isSaved = true;
+                            this.programData = resp;
+                            console.log(this.programData);
                           }
                         })
 

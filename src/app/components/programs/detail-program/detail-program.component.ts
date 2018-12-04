@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { ProgramService } from 'src/app/services/program.service';
+import { IProgram } from 'src/app/models/iprogram';
 
 declare var $: any;   //use jquery with in this component
 
@@ -13,8 +14,8 @@ declare var $: any;   //use jquery with in this component
 export class DetailProgramComponent implements OnInit {
 
   pgmId: number;
-  pgmData: {};
-  editablePgmData: {};
+  pgmData: IProgram;
+  editablePgmData: IProgram;
 
   statusMsg: string;
   isSaved: boolean = false;
@@ -59,8 +60,8 @@ export class DetailProgramComponent implements OnInit {
                       this.isSaved = true;
                       setTimeout( () =>{
                         $('#editModal').modal('hide');
-                        //this.pgmData = resp;
-                        this.getPgmData();
+                        this.pgmData = resp;
+                        //this.getPgmData();
                         //#1 page refresh
                       }, 3000 );
                       

@@ -52,11 +52,13 @@ RxJS and Observables
         Various method of operators, you can chain on Observables to filter data, sort, pipe, map
     Refer: http://jsbin.com/kuzifehivi/4/edit?html,js,console
 Other Decorators and @Injectable
-Pipes 
-Guards
 Interface
+Class
+Pipes   - will transform info from one format to another   ( timestamp => human readable time)
+Guards  - like a security guard for the route 
+using Modules 
 Unit Testing
-Modules
+
 ...
 ...
 

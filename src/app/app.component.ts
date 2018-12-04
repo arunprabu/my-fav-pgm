@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root', // exposed in a selector 
   templateUrl: './app.component.html',  //html 
-  styleUrls: ['./app.component.css'] // css
+  styleUrls: ['./app.component.css'] // css,
 })
 
 //ts
